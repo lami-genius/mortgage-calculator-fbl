@@ -110,3 +110,7 @@ mat-slider {
   font-size: 20px;
   font-weight: 10;
 }
+
+.amount_output > div {
+  margin: 0px 30px;
+}
