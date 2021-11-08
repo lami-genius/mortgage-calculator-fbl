@@ -1,0 +1,24 @@
+footer {
+  font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+a {
+  color: black;
+  font-weight: normal;
+}
+
+div {
+  flex: 1 0 100%;
+  padding: 2px;
+  margin: 2px;
+}

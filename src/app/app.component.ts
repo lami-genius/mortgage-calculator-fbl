@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'mcfbl-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mortgage-calculator-fbl';
+
+  title: string = 'app component'
+
 }
