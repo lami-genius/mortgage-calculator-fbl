@@ -109,6 +109,7 @@ mat-slider {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 10;
+  display: flex;
 }
 
 .amount_output > div {
