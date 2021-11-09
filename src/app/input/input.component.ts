@@ -44,28 +44,28 @@ export class InputComponent implements OnInit {
   }
 
   getUpdatedInterestRate(event: MatSliderChange) {
-    this.interestRate = event.value ? event.value : this.interestRate;
+    this.interestRate = event.value ? event.value : 0;
 
     // update calculation
     this.calMortgage()
   }
 
   getUpdatedDownPayment(event: MatSliderChange) {
-    this.downPayment = event.value ? event.value : this.downPayment;
+    this.downPayment = event.value ? event.value : 0;
 
     // update calculation
     this.calMortgage()
   }
 
   getUpdatedPurchasePrice(event: MatSliderChange) {
-    this.purchasePrice = event.value ? event.value : this.purchasePrice;
+    this.purchasePrice = event.value ? event.value : 0;
 
     // update calculation
     this.calMortgage()
   }
 
   getUpdatedRepaymentTime(event: MatSliderChange) {
-    this.repaymentTime = event.value ? event.value : this.repaymentTime;
+    this.repaymentTime = event.value ? event.value : 0;
 
     // update calculation
     this.calMortgage()
