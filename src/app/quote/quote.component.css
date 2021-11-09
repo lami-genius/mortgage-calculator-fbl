@@ -1,5 +1,6 @@
 .quote {
-  padding: 10px;
+  margin: 10px 0px;
+  padding: 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,4 +21,5 @@ button {
 
 .quote > cite {
   align-self: flex-end;
+  margin-top: 10px;
 }

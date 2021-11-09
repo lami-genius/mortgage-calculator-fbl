@@ -40,11 +40,11 @@ export const QUOTES: IQuote[] = [
   },
   {
     quoteBy: "Karl Rove",
-    quoteText: "Remember the Tea Party movement didn't get started in September of 2008 when the bank bailout was passed. It really began on Feb. 19th, 2009 when a television commentator named Rick Santelli stood up and said what the hell are we doing bailing out people who couldn't afford a mortgage by taking money from people like me who are prudent ?"
+    quoteText: "Remember the Tea Party movement didn't get started in September of 2008 when the bank bailout was passed. It really began on Feb. 19th, 2009 when a television commentator named Rick Santelli stood up and said what the hell are we doing bailing out people who couldn't afford a mortgage by taking money from people like me who are prudent?"
   },
   {
     quoteBy: "Lynn Shelton",
-    quoteText: "You wake up one day and you realize that all these years have gone by and I have this mortgage and I have this couch and I have this life and...is this going to be my prison ?"
+    quoteText: "You wake up one day and you realize that all these years have gone by and I have this mortgage and I have this couch and I have this life and...is this going to be my prison?"
   },
   {
     quoteBy: "Robert Kiyosaki",
