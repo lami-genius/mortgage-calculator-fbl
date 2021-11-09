@@ -31,13 +31,13 @@ export class InputComponent implements OnInit {
     this.estimatedPerMonth = P * ((r * (1 + r) ** n) / (((1 + r) ** n) - 1))
 
     // rounding up
-    if (n != 0) {
-      this.loanAmount = Math.ceil(this.estimatedPerMonth * n) > 0 ? Math.ceil(this.estimatedPerMonth * n) : 0
-      this.estimatedPerMonth = Math.ceil(this.estimatedPerMonth) > 0 ? Math.ceil(this.estimatedPerMonth) : 0
-    }
-    else {
+    if (n === 0 || r == 0 || P == 0) {
       this.loanAmount = 0
       this.estimatedPerMonth = 0
+    }
+    else {
+      this.loanAmount = Math.ceil(this.estimatedPerMonth * n) > 0 ? Math.ceil(this.estimatedPerMonth * n) : 0
+      this.estimatedPerMonth = Math.ceil(this.estimatedPerMonth) > 0 ? Math.ceil(this.estimatedPerMonth) : 0
     }
 
 
