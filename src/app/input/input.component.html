@@ -1,37 +1,35 @@
-<div class="continaer">
-    <div class="mortage-outline-container">
-        <div class="mortage-cal">
-            <h1 class="mortage-label">Mortgage calculator</h1>
-            <form>
-                <div class="input">
-                    <div>
-                        <label for="purchasePrice">Purchase Price: <span class="amount_input">{{purchasePrice |
-                                currency:
-                                'USD'
-                                :'symbol':'0.0-0'}}</span> </label>
-                        <mat-slider (input)="getUpdatedPurchasePrice($event)" type="range" [(ngModel)]="purchasePrice"
-                            name="purchasePrice" min="{{minValue}}" max="{{maxAmount}}" step="1" id="purchasePrice">
-                        </mat-slider>
-                    </div>
-                    <div>
-                        <label for="downPayment">Down Payment: <span class="amount_input">{{(downPayment > purchasePrice
-                                ?
-                                purchasePrice : downPayment) | currency: 'USD'
-                                :'symbol':'0.0-0'}}</span> </label>
-                        <mat-slider (input)="getUpdatedDownPayment($event)" type="range" [(ngModel)]="downPayment"
-                            name="downPayment" min="{{minValue}}" max="{{purchasePrice}}" step="1" id="downPayment">
-                        </mat-slider>
-                    </div>
-                    <div>
-                        <label for="repaymentTime">Repayment time: <span class="amount_input">{{repaymentTime }} years
-                            </span></label>
-                        <mat-slider (input)="getUpdatedRepaymentTime($event)" type="range" [(ngModel)]="repaymentTime"
-                            name="repaymentTime" min="{{minValue}}" max="{{maxRepaymentDuration}}" step="1"
-                            id="repaymentTime"> </mat-slider>
-                    </div>
-                </div>
-            </form>
+<div class="mortage-outline-container">
+    <div class="mortage-cal">
+        <h1 class="mortage-label">Mortgage calculator</h1>
+
+        <form>
             <div class="input">
+
+                <div>
+                    <label for="purchasePrice">Purchase Price: <span class="amount_input">{{purchasePrice |
+                            currency:
+                            'USD'
+                            :'symbol':'0.0-0'}}</span> </label>
+                    <mat-slider (input)="getUpdatedPurchasePrice($event)" type="range" [(ngModel)]="purchasePrice"
+                        name="purchasePrice" min="{{minValue}}" max="{{maxAmount}}" step="1" id="purchasePrice">
+                    </mat-slider>
+                </div>
+                <div>
+                    <label for="downPayment">Down Payment: <span class="amount_input">{{(downPayment > purchasePrice
+                            ?
+                            purchasePrice : downPayment) | currency: 'USD'
+                            :'symbol':'0.0-0'}}</span> </label>
+                    <mat-slider (input)="getUpdatedDownPayment($event)" type="range" [(ngModel)]="downPayment"
+                        name="downPayment" min="{{minValue}}" max="{{purchasePrice}}" step="1" id="downPayment">
+                    </mat-slider>
+                </div>
+                <div>
+                    <label for="repaymentTime">Repayment time: <span class="amount_input">{{repaymentTime }} years
+                        </span></label>
+                    <mat-slider (input)="getUpdatedRepaymentTime($event)" type="range" [(ngModel)]="repaymentTime"
+                        name="repaymentTime" min="{{minValue}}" max="{{maxRepaymentDuration}}" step="1"
+                        id="repaymentTime"> </mat-slider>
+                </div>
                 <div>
                     <label for="interestRate">Interest Rate: <span class="amount_input">{{interestRate
                             }}%</span></label>
@@ -51,7 +49,9 @@
                             :'symbol':'0.0-0'}}</span></label>
                 </div>
             </div>
-            <mcfbl-quote></mcfbl-quote>
-        </div>
+
+        </form>
+
+        <mcfbl-quote></mcfbl-quote>
     </div>
 </div>

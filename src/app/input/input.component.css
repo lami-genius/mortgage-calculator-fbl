@@ -30,9 +30,9 @@
 .input {
   margin-bottom: 10px 0;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -40,7 +40,7 @@
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-size: 12px;
-  flex: 0 1 250px;
+  flex: 1 1 250px;
   margin-bottom: 10px;
 }
 
@@ -114,4 +114,15 @@ mat-slider {
 
 .amount_output > div {
   margin: 0px 30px;
+}
+
+@media (max-width: 1000px) {
+  .mortage-cal {
+    height: 100%;
+    width: 88%;
+  }
+
+  .mortage-outline-container {
+    padding-top: 0%;
+  }
 }
