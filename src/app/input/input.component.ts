@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSliderChange } from '@angular/material/slider';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'mcfbl-input',
@@ -12,12 +13,14 @@ export class InputComponent implements OnInit {
   purchasePrice: number = 400000;
   repaymentTime: number = 30;
   interestRate: number = 5;
-  maxRepaymentDuration: number = 100;
+  maxRepaymentDuration: number = 250;
   maxAmount: number = 1000000;
   minValue: number = 0;
   title = 'mortgage-calculator-fbl';
   loanAmount: number = 0;
   estimatedPerMonth: number = 0;
+
+  constructor(private _toastrService: ToastrService) { }
 
   ngOnInit(): void {
     this.calMortgage()
@@ -60,6 +63,9 @@ export class InputComponent implements OnInit {
   getUpdatedPurchasePrice(event: MatSliderChange) {
     this.purchasePrice = event.value ? event.value : 0;
 
+    if (this.purchasePrice < this.downPayment)
+      this.downPayment = this.purchasePrice
+
     // update calculation
     this.calMortgage()
   }
@@ -80,4 +86,69 @@ export class InputComponent implements OnInit {
   }
 
 
+  onKeyPurchasePrice(event: any) {
+    if (event.target.value < 0) {
+      this._toastrService.warning('Purchase Price cannot be negative!')
+    } else if (event.target.value < this.downPayment) {
+      this.downPayment = this.purchasePrice
+    }
+    else {
+      this.purchasePrice = event.target.value
+    }
+
+
+    // update calculation
+    this.calMortgage()
+  }
+
+  onKeyDownPayment(event: any) {
+    if (event.target.value < 0) {
+      this._toastrService.warning('Down Payment cannot be negative!')
+    }
+    else if (event.target.value <= this.purchasePrice)
+      this.downPayment = event.target.value
+    else if (event.target.value > this.purchasePrice) {
+      this.downPayment = this.purchasePrice
+      this._toastrService.info('Down Payment must be less than or equal to Purchase Price')
+    }
+
+
+    // update calculation
+    this.calMortgage()
+  }
+  onKeyRepaymentTime(event: any) {
+    if (event.target.value < 0) {
+      this._toastrService.warning('Repayment Time cannot be negative!')
+    }
+    else if (event.target.value > this.maxRepaymentDuration) {
+      this.repaymentTime = this.maxRepaymentDuration
+      this._toastrService.info('Repayment Time is at most ' + this.maxRepaymentDuration + ' years!')
+    }
+    else {
+      this.repaymentTime = event.target.value
+    }
+
+    // update calculation
+    this.calMortgage()
+  }
+
+  onKeyInterestRate(event: any) {
+    if (event.target.value < 0) {
+      this._toastrService.warning('Interest Rate cannot be negative!')
+    }
+    if (event.target.value > 100) {
+      {
+        this.interestRate = 100
+        this._toastrService.warning('Interest Rate must be at most 100!')
+      }
+    }
+    else {
+      this.interestRate = event.target.value
+    }
+
+    // update calculation
+    this.calMortgage()
+  }
 }
+
+

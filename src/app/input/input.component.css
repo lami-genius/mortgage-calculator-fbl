@@ -31,8 +31,7 @@
   margin-bottom: 10px 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -40,14 +39,43 @@
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 250px;
-  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.dyn-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.dyn-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dyn-output > div {
+  width: 50%;
+  flex: 1 1 auto;
+}
+
+.dyn-slider {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .output {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 100%;
 }
 
 .output > div {
@@ -55,23 +83,6 @@
     sans-serif;
   font-size: 12px;
   width: 30%;
-}
-
-input {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  background: rgb(161, 166, 233);
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-  opacity: 2;
-  border-radius: 4px;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  margin: 15px 0px;
 }
 
 input::-webkit-slider-thumb {
@@ -95,7 +106,7 @@ input::-webkit-slider-horizontal {
 }
 
 mat-slider {
-  width: 100%;
+  width: 98%;
   margin-left: -8px;
 }
 .amount_input {
@@ -109,14 +120,13 @@ mat-slider {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 10;
-  display: flex;
 }
 
 .amount_output > div {
   margin: 0px 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .mortage-cal {
     height: 100%;
     width: 88%;
@@ -124,5 +134,37 @@ mat-slider {
 
   .mortage-outline-container {
     padding-top: 0%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"] {
+  border: rgb(90, 106, 250) 2px solid;
+  border-radius: 5px;
+}
+
+label {
+  align-self: center;
+  margin-right: 5px;
+}
+
+@media (max-width: 450px) {
+  .dyn-output {
+    flex-direction: column;
+  }
+
+  .dyn-output > div {
+    margin-top: 20px;
   }
 }

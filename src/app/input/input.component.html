@@ -1,52 +1,76 @@
 <div class="mortage-outline-container">
     <div class="mortage-cal">
         <h1 class="mortage-label">Mortgage calculator</h1>
-
-        <form>
+        <form #inputForm="ngForm">
             <div class="input">
-
                 <div>
-                    <label for="purchasePrice">Purchase Price: <span class="amount_input">{{purchasePrice |
-                            currency:
-                            'USD'
-                            :'symbol':'0.0-0'}}</span> </label>
-                    <mat-slider (input)="getUpdatedPurchasePrice($event)" type="range" [(ngModel)]="purchasePrice"
-                        name="purchasePrice" min="{{minValue}}" max="{{maxAmount}}" step="1" id="purchasePrice">
-                    </mat-slider>
+                    <div class="dyn-input">
+                        <label for="purchasePrice">Purchase Price: </label> <span class="amount_input">$ <input
+                                type="number" (keyup)="onKeyPurchasePrice($event)" name="purchasePrice"
+                                [(ngModel)]="purchasePrice" value="{{purchasePrice}}" />
+                        </span>
+                    </div>
+                    <div class="dyn-slider">
+                        <mat-slider (input)="getUpdatedPurchasePrice($event)" type="range" [(ngModel)]="purchasePrice"
+                            name="purchasePrice" value="{{purchasePrice}}" min="{{minValue}}" max="{{maxAmount}}"
+                            step="1" id="purchasePrice">
+                        </mat-slider>
+                    </div>
                 </div>
                 <div>
-                    <label for="downPayment">Down Payment: <span class="amount_input">{{(downPayment > purchasePrice
-                            ?
-                            purchasePrice : downPayment) | currency: 'USD'
-                            :'symbol':'0.0-0'}}</span> </label>
-                    <mat-slider (input)="getUpdatedDownPayment($event)" type="range" [(ngModel)]="downPayment"
-                        name="downPayment" min="{{minValue}}" max="{{purchasePrice}}" step="1" id="downPayment">
-                    </mat-slider>
+                    <div class="dyn-input">
+                        <label for="downPayment">Down Payment: </label><span class="amount_input">$ <input type="number"
+                                (keyup)="onKeyDownPayment($event)" name="downPayment" [(ngModel)]="downPayment"
+                                value="{{ downPayment }}" />
+                        </span>
+                    </div>
+                    <div class="dyn-slider">
+                        <mat-slider (input)="getUpdatedDownPayment($event)" type="range" [(ngModel)]="downPayment"
+                            name="downPayment" min="{{minValue}}" max="{{purchasePrice}}" step="1" id="downPayment">
+                        </mat-slider>
+                    </div>
                 </div>
                 <div>
-                    <label for="repaymentTime">Repayment time: <span class="amount_input">{{repaymentTime }} years
-                        </span></label>
-                    <mat-slider (input)="getUpdatedRepaymentTime($event)" type="range" [(ngModel)]="repaymentTime"
-                        name="repaymentTime" min="{{minValue}}" max="{{maxRepaymentDuration}}" step="1"
-                        id="repaymentTime"> </mat-slider>
+                    <div class="dyn-input">
+                        <label for="repaymentTime">Repayment time: </label>
+                        <span><input type="number" (keyup)="onKeyRepaymentTime($event)" name="repaymentTime"
+                                [(ngModel)]="repaymentTime" value="{{ repaymentTime }}" /> yr
+                        </span>
+                    </div>
+                    <div class="dyn-slider">
+                        <mat-slider (input)="getUpdatedRepaymentTime($event)" type="range" [(ngModel)]="repaymentTime"
+                            name="repaymentTime" min="{{minValue}}" max="{{maxRepaymentDuration}}" step="1"
+                            id="repaymentTime"> </mat-slider>
+                    </div>
                 </div>
                 <div>
-                    <label for="interestRate">Interest Rate: <span class="amount_input">{{interestRate
-                            }}%</span></label>
-                    <mat-slider (input)="getUpdatedInterestRate($event)" type="range" [(ngModel)]="interestRate"
-                        value="{{interestRate}}" name="interestRate" min="0" max="100" step="0.1" id="interestRate">
-                    </mat-slider>
+                    <div class="dyn-input">
+                        <label for="interestRate">Interest Rate: </label>
+                        <span><input type="number" (keyup)="onKeyInterestRate($event)" name="interestRate"
+                                [(ngModel)]="interestRate" value="{{ interestRate }}" /> %
+                        </span>
+                    </div>
+                    <div class="dyn-slider">
+                        <mat-slider (input)="getUpdatedInterestRate($event)" type="range" [(ngModel)]="interestRate"
+                            value="{{interestRate}}" name="interestRate" min="0" max="100" step="0.1" id="interestRate">
+                        </mat-slider>
+                    </div>
                 </div>
                 <div>
-                    <label>Loan Amount: <br /> <br /> <span class="amount_output">{{loanAmount | currency:
-                            'USD'
-                            :'symbol':'0.0-0'}}</span></label>
-                </div>
-                <div>
-                    <label>Estimated Monthly Amount: <br /> <br /><span class="amount_output">{{estimatedPerMonth |
-                            currency:
-                            'USD'
-                            :'symbol':'0.0-0'}}</span></label>
+                    <div class="dyn-output">
+                        <div>
+                            <label>Loan Amount: <br /> <br /> <span class="amount_output">{{loanAmount | currency:
+                                    'USD'
+                                    :'symbol':'0.0-0'}}</span></label>
+                        </div>
+                        <div>
+                            <label>Estimated Monthly Amount: <br /> <br /><span
+                                    class="amount_output">{{estimatedPerMonth |
+                                    currency:
+                                    'USD'
+                                    :'symbol':'0.0-0'}}</span></label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
