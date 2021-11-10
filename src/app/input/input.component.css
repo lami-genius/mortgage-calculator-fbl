@@ -114,7 +114,7 @@ mat-slider {
 
 .amount_output {
   font-family: Helvetica, arial, sans-serif;
-  margin-bottom: 10px;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: 10;
   align-self: center;
@@ -156,6 +156,10 @@ input[type="number"] {
 label {
   align-self: center;
   margin-right: 5px;
+}
+
+.label_output {
+  font-size: 15px;
 }
 
 @media (max-width: 450px) {

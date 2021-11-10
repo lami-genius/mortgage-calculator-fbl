@@ -57,12 +57,13 @@
                     </div>
                 </div>
                 <div class="dyn-input">
-                    <label>Loan Amount: <br /> <br /></label> <span class="amount_output">{{loanAmount | currency:
+                    <label class="label_output">Loan Amount: <br /> <br /></label> <span
+                        class="amount_output">{{loanAmount | currency:
                         'USD'
                         :'symbol':'0.0-0'}}</span>
                 </div>
                 <div class="dyn-input">
-                    <label>Estimated Monthly Amount: <br /> <br /></label><span
+                    <label class="label_output">Estimated Monthly Amount: <br /> <br /></label><span
                         class="amount_output">{{estimatedPerMonth |
                         currency:
                         'USD'
