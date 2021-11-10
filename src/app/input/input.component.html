@@ -33,8 +33,8 @@
                 <div>
                     <div class="dyn-input">
                         <label for="repaymentTime">Repayment time: </label>
-                        <span><input type="number" (keyup)="onKeyRepaymentTime($event)" name="repaymentTime"
-                                [(ngModel)]="repaymentTime" value="{{ repaymentTime }}" /> yr
+                        <span class="amount_input"><input type="number" (keyup)="onKeyRepaymentTime($event)"
+                                name="repaymentTime" [(ngModel)]="repaymentTime" value="{{ repaymentTime }}" /> yr
                         </span>
                     </div>
                     <div class="dyn-slider">
@@ -46,8 +46,8 @@
                 <div>
                     <div class="dyn-input">
                         <label for="interestRate">Interest Rate: </label>
-                        <span><input type="number" (keyup)="onKeyInterestRate($event)" name="interestRate"
-                                [(ngModel)]="interestRate" value="{{ interestRate }}" /> %
+                        <span class="amount_input"><input type="number" (keyup)="onKeyInterestRate($event)"
+                                name="interestRate" [(ngModel)]="interestRate" value="{{ interestRate }}" /> %
                         </span>
                     </div>
                     <div class="dyn-slider">
@@ -56,21 +56,17 @@
                         </mat-slider>
                     </div>
                 </div>
-                <div>
-                    <div class="dyn-output">
-                        <div>
-                            <label>Loan Amount: <br /> <br /> <span class="amount_output">{{loanAmount | currency:
-                                    'USD'
-                                    :'symbol':'0.0-0'}}</span></label>
-                        </div>
-                        <div>
-                            <label>Estimated Monthly Amount: <br /> <br /><span
-                                    class="amount_output">{{estimatedPerMonth |
-                                    currency:
-                                    'USD'
-                                    :'symbol':'0.0-0'}}</span></label>
-                        </div>
-                    </div>
+                <div class="dyn-input">
+                    <label>Loan Amount: <br /> <br /></label> <span class="amount_output">{{loanAmount | currency:
+                        'USD'
+                        :'symbol':'0.0-0'}}</span>
+                </div>
+                <div class="dyn-input">
+                    <label>Estimated Monthly Amount: <br /> <br /></label><span
+                        class="amount_output">{{estimatedPerMonth |
+                        currency:
+                        'USD'
+                        :'symbol':'0.0-0'}}</span>
                 </div>
             </div>
 
