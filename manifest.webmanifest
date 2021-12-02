@@ -1,6 +1,6 @@
 {
-  "name": "mortgage-calculator-fbl",
-  "short_name": "mortgage-calculator-fbl",
+  "name": "Mortgage Calculator",
+  "short_name": "Mortgage Calc",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
