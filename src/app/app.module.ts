@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteService } from './services/quote.service';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,13 @@ import { FooterComponent } from './footer/footer.component';
     }),
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    MatSliderModule
+    MatSliderModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [QuoteService],
   bootstrap: [AppComponent]
