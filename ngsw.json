@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1638425098239,
+  "index": "/mortgage-calculator-fbl/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/mortgage-calculator-fbl/favicon.ico",
+        "/mortgage-calculator-fbl/index.html",
+        "/mortgage-calculator-fbl/main.0e6b62902038aba4e3d5.js",
+        "/mortgage-calculator-fbl/manifest.webmanifest",
+        "/mortgage-calculator-fbl/polyfills.7aafe648637e0f6a730a.js",
+        "/mortgage-calculator-fbl/runtime.69625140414b381436c8.js",
+        "/mortgage-calculator-fbl/styles.dad7a71879b81213e31f.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/mortgage-calculator-fbl/NeueHaasGrotTextRound-65Medium-Web.woff.b62fbb828b0e2f10a94e.ttf",
+        "/mortgage-calculator-fbl/assets/fonts/NeueHaasGrotTextRound-65Medium-Web.woff.ttf",
+        "/mortgage-calculator-fbl/assets/icons/icon-128x128.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-144x144.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-152x152.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-192x192.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-384x384.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-512x512.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-72x72.png",
+        "/mortgage-calculator-fbl/assets/icons/icon-96x96.png",
+        "/mortgage-calculator-fbl/assets/logo/logo",
+        "/mortgage-calculator-fbl/assets/logo/logo.drawio.ico",
+        "/mortgage-calculator-fbl/assets/logo/logo.drawio.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/mortgage-calculator-fbl/NeueHaasGrotTextRound-65Medium-Web.woff.b62fbb828b0e2f10a94e.ttf": "5322a876d810b65a1a3318a3829d517817b215ca",
+    "/mortgage-calculator-fbl/assets/fonts/NeueHaasGrotTextRound-65Medium-Web.woff.ttf": "5322a876d810b65a1a3318a3829d517817b215ca",
+    "/mortgage-calculator-fbl/assets/icons/icon-128x128.png": "f09df2c374c103a142d960975f0535775adb57b4",
+    "/mortgage-calculator-fbl/assets/icons/icon-144x144.png": "9c0e3757baaf785331ccb8b6c02411ed1ea9dd7d",
+    "/mortgage-calculator-fbl/assets/icons/icon-152x152.png": "4cb029b7b00126b9daf65ce01d0b4019725bb749",
+    "/mortgage-calculator-fbl/assets/icons/icon-192x192.png": "08344348f7b1a866421d8b365803021ab231bb61",
+    "/mortgage-calculator-fbl/assets/icons/icon-384x384.png": "5d32f6e9106d56591408cb4cecadc147db72cfd6",
+    "/mortgage-calculator-fbl/assets/icons/icon-512x512.png": "52ed27ba5446b69cac22ca09ce3cc69e5c9bfd83",
+    "/mortgage-calculator-fbl/assets/icons/icon-72x72.png": "249684c6304d1823bef32ea8662b7dcd72db056f",
+    "/mortgage-calculator-fbl/assets/icons/icon-96x96.png": "09ae1e77282fef293ad7722995d89e4b6722004c",
+    "/mortgage-calculator-fbl/assets/logo/logo": "5a99891f34b50f5a08cc54d9a82f84944fbdf97e",
+    "/mortgage-calculator-fbl/assets/logo/logo.drawio.ico": "d4b592a607bb539a6faae48f348dfaf3d88402b1",
+    "/mortgage-calculator-fbl/assets/logo/logo.drawio.png": "39078a12d99c48c1d66966d5fe48de96b39043e0",
+    "/mortgage-calculator-fbl/favicon.ico": "d4b592a607bb539a6faae48f348dfaf3d88402b1",
+    "/mortgage-calculator-fbl/index.html": "2904e9f7fdfe788ed859daf495afa2f250456fe8",
+    "/mortgage-calculator-fbl/main.0e6b62902038aba4e3d5.js": "be6a5ea19b5647b9c91f26582133bf88f7166262",
+    "/mortgage-calculator-fbl/manifest.webmanifest": "3e9f16475c307101766fd4e590d86f8091844cbf",
+    "/mortgage-calculator-fbl/polyfills.7aafe648637e0f6a730a.js": "4a3aa2041c65b8160774d62845f5616c90fedc21",
+    "/mortgage-calculator-fbl/runtime.69625140414b381436c8.js": "3e180d7983417674182e2b4d68b3c7de8285711d",
+    "/mortgage-calculator-fbl/styles.dad7a71879b81213e31f.css": "439d609c4a5a68319e9ccc2896615c0b62db4081"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
